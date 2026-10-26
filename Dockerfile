@@ -2,11 +2,9 @@
 FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
-COPY backend/RepairHub.API/RepairHub.API.csproj backend/RepairHub.API/
-RUN dotnet restore backend/RepairHub.API/RepairHub.API.csproj
-
 COPY backend/ backend/
-RUN dotnet publish backend/RepairHub.API/RepairHub.API.csproj -c Release -o /app/publish
+RUN dotnet restore backend/RepairHub.API/RepairHub.API.csproj
+RUN dotnet publish backend/RepairHub.API/RepairHub.API.csproj -c Release --no-restore -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
