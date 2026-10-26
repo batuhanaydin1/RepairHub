@@ -1,0 +1,20 @@
+# Secrets and local settings
+**/appsettings.Development.json
+**/appsettings.*.local.json
+**/.env
+**/.env.*
+!**/.env.example
+
+# .NET build output
+**/bin/
+**/obj/
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# IDE and operating system files
+.vs/
+.vscode/
+.DS_Store
+Thumbs.db
