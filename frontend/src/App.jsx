@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const API_URL = 'http://localhost:5205/api/customers'
-const SERVICE_API_URL = 'http://localhost:5205/api/service-records'
+const API_URL = 'https://repairhub-d5q1.onrender.com/api/customers'
+const SERVICE_API_URL = 'https://repairhub-d5q1.onrender.com/api/service-records'
 
 const emptyForm = {
   fullName: '',
